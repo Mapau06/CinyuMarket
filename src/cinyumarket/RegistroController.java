@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author Paula
  */
-public class PrincipalController implements Initializable {
+public class RegistroController implements Initializable {
 
     /**
      * Initializes the controller class.

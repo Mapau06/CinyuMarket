@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author danie
+ * @author Paula
  */
 public class CinyuMarket extends Application {
     
