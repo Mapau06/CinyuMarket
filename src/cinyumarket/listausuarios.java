@@ -4,6 +4,10 @@
  */
 package cinyumarket;
 
+import static cinyumarket.LoginController.exit;
+import static cinyumarket.LoginController.log;
+import static cinyumarket.LoginController.reg;
+import static cinyumarket.LoginController.rexit;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -50,7 +54,6 @@ public class listausuarios {
             }while(p != null);
             if(p == null){
                 info = new usuario(nom, contraseña);
-                JOptionPane.showMessageDialog(null, "Registro exitoso!");
                 return info;
             }else{
                 return null;
@@ -66,12 +69,10 @@ public class listausuarios {
         }else{
             cab = info;
         }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("usuarios.txt", true))) {
-            writer.write("Usuario: " + nombre + ", Contraseña: " + contraseña);
-            writer.newLine(); 
-        } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo: " + e.getMessage());
-        }
+        log.setVisible(false);
+        exit.setVisible(false);
+        reg.setVisible(false);
+        rexit.setVisible(true);
     }
     
     public usuario login(String nombre, String contraseña){

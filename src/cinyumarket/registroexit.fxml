@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #B29E72;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #B29E72;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinyumarket.RegistroexitController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/tick.png" />
+            <Image url="@images/tick.png" />
          </image>
       </ImageView>
       <Label text="Cuenta creada exitosamente!">
@@ -24,7 +24,7 @@
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Button mnemonicParsing="false" style="-fx-background-color: #74581F;" text="Continuar" textFill="WHITE">
+      <Button fx:id="btnCont" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: #74581F;" text="Continuar" textFill="WHITE">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>

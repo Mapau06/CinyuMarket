@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #B29E72;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinyumarket.MenuLoginController">
+<VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" spacing="10.0" style="-fx-background-color: #B29E72;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinyumarket.MenuRegistroController">
    <children>
       <Label text="Bienvenido">
          <font>
@@ -19,7 +19,7 @@
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <TextField prefHeight="30.0" prefWidth="260.0" promptText="Ingresa tu usuario" style="-fx-background-color: #60594B;">
+      <TextField fx:id="user" prefHeight="30.0" prefWidth="260.0" promptText="Ingresa tu usuario" style="-fx-background-color: #60594B;">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
@@ -29,12 +29,12 @@
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <TextField prefHeight="30.0" prefWidth="260.0" promptText="Ingresa tu contraseña" style="-fx-background-color: #60594B;">
+      <TextField fx:id="pass" prefHeight="30.0" prefWidth="260.0" promptText="Ingresa tu contraseña" style="-fx-background-color: #60594B;">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
       </TextField>
-      <Button mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #74581F;" text="Crear Cuenta" textFill="WHITE">
+      <Button fx:id="btnCrear" mnemonicParsing="false" onAction="#actionEvent" prefHeight="30.0" style="-fx-background-color: #74581F;" text="Crear Cuenta" textFill="WHITE">
          <VBox.margin>
             <Insets left="85.0" right="80.0" />
          </VBox.margin>
