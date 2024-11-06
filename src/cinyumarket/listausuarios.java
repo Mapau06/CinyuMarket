@@ -8,9 +8,6 @@ import static cinyumarket.LoginController.exit;
 import static cinyumarket.LoginController.log;
 import static cinyumarket.LoginController.reg;
 import static cinyumarket.LoginController.rexit;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**

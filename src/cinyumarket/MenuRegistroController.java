@@ -4,10 +4,6 @@
  */
 package cinyumarket;
 
-import static cinyumarket.LoginController.exit;
-import static cinyumarket.LoginController.log;
-import static cinyumarket.LoginController.reg;
-import static cinyumarket.LoginController.rexit;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
