@@ -18,7 +18,54 @@ public class colaCarrito {
         this.cola = new LinkedList<>();
     }
     
-    public void añadirAlCarrito(producto p){
-        cola.add(p);
+    public void agregarProducto(producto prod) {
+        cola.add(prod);
+        System.out.println("Producto agregado: " + prod.getNombre());
+    }
+
+    // Método para eliminar un producto específico por su nombre
+    public void eliminarProductoPorNombre(String nombreProducto) {
+        for (producto elim : cola){
+            if(elim.nombre.equals(nombreProducto)){
+                cola.remove(elim);
+            }
+        }
+    }
+
+    // Método para comprar un producto específico por su nombre
+    public void comprarProductoPorNombre(String nombreProducto) {
+        producto productoComprado = null;
+        for (producto prod : cola) {
+            if (prod.getNombre().equalsIgnoreCase(nombreProducto)) {
+                productoComprado = prod;
+                break;
+            }
+        }
+
+        if (productoComprado != null) {
+            System.out.println("Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
+            cola.remove(productoComprado);
+        } else {
+            System.out.println("El producto con el nombre '" + nombreProducto + "' no está en el carrito.");
+        }
+    }
+
+    // Método para procesar la compra de todos los productos en el carrito
+    public void comprarTodosLosProductos() {
+        if (cola.isEmpty()) {
+            System.out.println("El carrito está vacío, no hay productos para comprar.");
+            return;
+        }
+
+        float total = 0;
+        System.out.println("Procesando compra de todos los productos:");
+
+        for (producto prod : cola) {
+            System.out.println("Comprando producto: " + prod.getNombre() + " - Precio: $" + prod.getPrecio());
+            total += prod.getPrecio();
+        }
+
+        cola.clear(); // Vacía el carrito después de comprar
+        System.out.println("Compra realizada. Total: $" + total);
     }
 }
