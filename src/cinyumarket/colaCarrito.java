@@ -28,6 +28,7 @@ public class colaCarrito {
         for (producto elim : cola){
             if(elim.nombre.equals(nombreProducto)){
                 cola.remove(elim);
+                break;
             }
         }
     }
