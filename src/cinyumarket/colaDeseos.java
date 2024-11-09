@@ -12,16 +12,16 @@ import javax.swing.JOptionPane;
  *
  * @author Paula
  */
-public class colaCarrito {
+public class colaDeseos {
     public static Queue<producto> cola;
     
-    public colaCarrito(){
+    public colaDeseos(){
         this.cola = new LinkedList<>();
     }
     
     public void agregarProducto(producto prod) {
         cola.add(prod);
-        JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
+        JOptionPane.showMessageDialog(null, "Producto agregado a deseos: " + prod.getNombre());
     }
 
     // Método para eliminar un producto específico por su nombre
