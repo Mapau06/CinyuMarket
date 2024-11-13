@@ -22,10 +22,9 @@ public class colaCarrito {
     public void agregarProducto(producto prod) {
         boolean existe = false;
 
-    // Verificar si el producto ya está en el carrito
         for (producto p : cola) {
-            if (p.getNombre().equals(prod.getNombre())) {  // Comparar por ID o alguna propiedad única
-                p.setCantidad(p.getCantidad() + 1);  // Si existe, aumentar la cantidad
+            if (p.getNombre().equals(prod.getNombre()) && p.comprador.equals(MenuLoginController.nom)) {  
+                p.setCantidad(p.getCantidad() + 1);  
                 existe = true;
                 JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
                 break;
@@ -33,7 +32,7 @@ public class colaCarrito {
         }
 
         // Si el producto no existe, agregarlo al carrito
-        if (!existe) {
+        if (!existe && prod.comprador.equals(MenuLoginController.nom)) {
             cola.add(prod);
             JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
         }

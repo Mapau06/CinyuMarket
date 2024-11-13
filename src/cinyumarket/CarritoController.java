@@ -51,64 +51,65 @@ public class CarritoController implements Initializable {
     public void actualizarCarrito() {
         int index = 1; 
         for (producto p : PrincipalController.cola.getProductos()) {
-
-            if (index == 1) {
-                lbNom1.setText(p.getNombre());
-                lbPre1.setText("$" + p.getPrecio());
-                lbCant1.setText("Cantidad: " + p.getCantidad());
-                Image image1 = new Image(p.getFoto());
-                img1.setImage(image1);
-                Button btnComprar1 = new Button("Comprar");
-                btnComprar1.getStyleClass().add("boton-comprar");
-                vbox1.getChildren().add(btnComprar1);
-            } else if (index == 2) {
-                lbNom2.setText(p.getNombre());
-                lbPre2.setText("$" + p.getPrecio());
-                lbCant2.setText("Cantidad: " + p.getCantidad());
-                Image image2 = new Image(p.getFoto());
-                img2.setImage(image2);
-                Button btnComprar2 = new Button("Comprar");
-                btnComprar2.getStyleClass().add("boton-comprar");
-                vbox2.getChildren().add(btnComprar2);
-            } else if (index == 3) {
-                lbNom3.setText(p.getNombre());
-                lbPre3.setText("$" + p.getPrecio());
-                lbCant3.setText("Cantidad: " + p.getCantidad());
-                Image image3 = new Image(p.getFoto());
-                img3.setImage(image3);
-                Button btnComprar3 = new Button("Comprar");
-                btnComprar3.getStyleClass().add("boton-comprar");
-                vbox3.getChildren().add(btnComprar3);
-            } else if (index == 4) {
-                lbNom4.setText(p.getNombre());
-                lbPre4.setText("$" + p.getPrecio());
-                lbCant4.setText("Cantidad: " + p.getCantidad());
-                Image image4 = new Image(p.getFoto());
-                img4.setImage(image4);
-                Button btnComprar4 = new Button("Comprar");
-                btnComprar4.getStyleClass().add("boton-comprar");
-                vbox4.getChildren().add(btnComprar4);
-            } else if (index == 5) {
-                lbNom5.setText(p.getNombre());
-                lbPre5.setText("$" + p.getPrecio());
-                lbCant5.setText("Cantidad: " + p.getCantidad());
-                Image image5 = new Image(p.getFoto());
-                img5.setImage(image5);
-                Button btnComprar5 = new Button("Comprar");
-                btnComprar5.getStyleClass().add("boton-comprar");
-                vbox5.getChildren().add(btnComprar5);
-            } else if (index == 6) {
-                lbNom6.setText(p.getNombre());
-                lbPre6.setText("$" + p.getPrecio());
-                lbCant6.setText("Cantidad: " + p.getCantidad());
-                Image image6 = new Image(p.getFoto());
-                img6.setImage(image6);
-                Button btnComprar6 = new Button("Comprar");
-                btnComprar6.getStyleClass().add("boton-comprar");
-                vbox6.getChildren().add(btnComprar6);
+            if (p.comprador.equals(MenuLoginController.nom)){
+                if (index == 1) {
+                    lbNom1.setText(p.getNombre());
+                    lbPre1.setText("$" + p.getPrecio());
+                    lbCant1.setText("Cantidad: " + p.getCantidad());
+                    Image image1 = new Image(p.getFoto());
+                    img1.setImage(image1);
+                    Button btnComprar1 = new Button("Comprar");
+                    btnComprar1.getStyleClass().add("boton-comprar");
+                    vbox1.getChildren().add(btnComprar1);
+                } else if (index == 2) {
+                    lbNom2.setText(p.getNombre());
+                    lbPre2.setText("$" + p.getPrecio());
+                    lbCant2.setText("Cantidad: " + p.getCantidad());
+                    Image image2 = new Image(p.getFoto());
+                    img2.setImage(image2);
+                    Button btnComprar2 = new Button("Comprar");
+                    btnComprar2.getStyleClass().add("boton-comprar");
+                    vbox2.getChildren().add(btnComprar2);
+                } else if (index == 3) {
+                    lbNom3.setText(p.getNombre());
+                    lbPre3.setText("$" + p.getPrecio());
+                    lbCant3.setText("Cantidad: " + p.getCantidad());
+                    Image image3 = new Image(p.getFoto());
+                    img3.setImage(image3);
+                    Button btnComprar3 = new Button("Comprar");
+                    btnComprar3.getStyleClass().add("boton-comprar");
+                    vbox3.getChildren().add(btnComprar3);
+                } else if (index == 4) {
+                    lbNom4.setText(p.getNombre());
+                    lbPre4.setText("$" + p.getPrecio());
+                    lbCant4.setText("Cantidad: " + p.getCantidad());
+                    Image image4 = new Image(p.getFoto());
+                    img4.setImage(image4);
+                    Button btnComprar4 = new Button("Comprar");
+                    btnComprar4.getStyleClass().add("boton-comprar");
+                    vbox4.getChildren().add(btnComprar4);
+                } else if (index == 5) {
+                    lbNom5.setText(p.getNombre());
+                    lbPre5.setText("$" + p.getPrecio());
+                    lbCant5.setText("Cantidad: " + p.getCantidad());
+                    Image image5 = new Image(p.getFoto());
+                    img5.setImage(image5);
+                    Button btnComprar5 = new Button("Comprar");
+                    btnComprar5.getStyleClass().add("boton-comprar");
+                    vbox5.getChildren().add(btnComprar5);
+                } else if (index == 6) {
+                    lbNom6.setText(p.getNombre());
+                    lbPre6.setText("$" + p.getPrecio());
+                    lbCant6.setText("Cantidad: " + p.getCantidad());
+                    Image image6 = new Image(p.getFoto());
+                    img6.setImage(image6);
+                    Button btnComprar6 = new Button("Comprar");
+                    btnComprar6.getStyleClass().add("boton-comprar");
+                    vbox6.getChildren().add(btnComprar6);
+                }
+                index++;
+                if (index > 6) break; 
             }
-            index++;
-            if (index > 6) break; 
         }
     }
     

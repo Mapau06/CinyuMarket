@@ -26,14 +26,18 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #A19273;">
                <children>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@images/profile.png" />
-                     </image>
+                  <Button fx:id="btnBack" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: transparent;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/profile.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                      <HBox.margin>
                         <Insets right="140.0" />
                      </HBox.margin>
-                  </ImageView>
+                  </Button>
                   <Label text="CinyuMarket">
                      <font>
                         <Font name="Tahoma Bold" size="30.0" />
