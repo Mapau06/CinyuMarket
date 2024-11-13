@@ -20,8 +20,23 @@ public class colaCarrito {
     }
     
     public void agregarProducto(producto prod) {
-        cola.add(prod);
-        JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
+        boolean existe = false;
+
+    // Verificar si el producto ya está en el carrito
+        for (producto p : cola) {
+            if (p.getNombre().equals(prod.getNombre())) {  // Comparar por ID o alguna propiedad única
+                p.setCantidad(p.getCantidad() + 1);  // Si existe, aumentar la cantidad
+                existe = true;
+                JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
+                break;
+            }
+        }
+
+        // Si el producto no existe, agregarlo al carrito
+        if (!existe) {
+            cola.add(prod);
+            JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
+        }
     }
 
     // Método para eliminar un producto específico por su nombre
@@ -69,5 +84,28 @@ public class colaCarrito {
 
         cola.clear(); // Vacía el carrito después de comprar
         System.out.println("Compra realizada. Total: $" + total);
+    }
+    public producto obtenerProducto(String nombreProducto) {
+        for (producto prod : cola) {
+            if (prod.getNombre().equals(nombreProducto)) {
+                return prod;
+            }
+        }
+        return null;  // En caso de que no se encuentre el producto
+    }
+    public int calcularCantidad(producto producto) {
+        int cantidad = 0;
+
+        // Recorremos la cola y contamos cuántas veces aparece el producto
+        for (producto p : cola) {
+            if (p.getNombre().equals(producto.getNombre())) {
+                cantidad++;
+            }
+        }
+
+        return cantidad;
+    }
+    public Queue<producto> getProductos() {
+        return cola;
     }
 }

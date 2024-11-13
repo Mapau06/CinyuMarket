@@ -41,51 +41,51 @@ public class PrincipalController implements Initializable {
     public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
         if(evt.equals(btnC1)){
-            producto p = new producto("Asistente Virtual Alexa 110V/240V Color Negro", "images/image-removebg-preview (2).png", MenuLoginController.nom, 195393);
+            producto p = new producto("Asistente Virtual Alexa 110V/240V Color Negro", "/cinyumarket/images/image-removebg-preview (2).png", MenuLoginController.nom, 195393, 1);
             cola.agregarProducto(p);
         }
         if(evt.equals(btnC2)){
-            producto p = new producto("Cerradura digital inteligente", "images/image-removebg-preview (5).png", MenuLoginController.nom, 1236000);
+            producto p = new producto("Cerradura digital inteligente", "/cinyumarket/images/image-removebg-preview (5).png", MenuLoginController.nom, 1236000, 1);
             cola.agregarProducto(p);
         }
         if(evt.equals(btnC3)){
-            producto p = new producto("Corrector de postura digital", "images/image-removebg-preview (7).png", MenuLoginController.nom, 490000);
+            producto p = new producto("Corrector de postura digital", "/cinyumarket/images/image-removebg-preview (7).png", MenuLoginController.nom, 490000, 1);
             cola.agregarProducto(p);
         }
         if(evt.equals(btnC4)){
-            producto p = new producto("Enchufe Inteligente Smart Plug Wifi Control App Color Blanco", "images/image-removebg-preview (3).png", MenuLoginController.nom, 26990);
+            producto p = new producto("Enchufe Inteligente Smart Plug Wifi Control App Color Blanco", "/cinyumarket/images/image-removebg-preview (3).png", MenuLoginController.nom, 26990, 1);
             cola.agregarProducto(p);
         }
         if(evt.equals(btnC5)){
-            producto p = new producto("Bascula inteligente Color Blanco", "images/image-removebg-preview (6).png", MenuLoginController.nom, 816000);
+            producto p = new producto("Bascula inteligente Color Blanco", "/cinyumarket/images/image-removebg-preview (6).png", MenuLoginController.nom, 816000, 1);
             cola.agregarProducto(p);
         }
         if(evt.equals(btnC6)){
-            producto p = new producto("Lampara de mesa inteligente", "images/image-removebg-preview (9).png", MenuLoginController.nom, 127000);
+            producto p = new producto("Lampara de mesa inteligente", "/cinyumarket/images/image-removebg-preview (9).png", MenuLoginController.nom, 127000, 1);
             cola.agregarProducto(p);
         }
         if(evt.equals(btnD1)){
-            producto p = new producto("Asistente Virtual Alexa 110V/240V Color Negro", "images/image-removebg-preview (2).png", MenuLoginController.nom, 195393);
+            producto p = new producto("Asistente Virtual Alexa 110V/240V Color Negro", "/cinyumarket/images/image-removebg-preview (2).png", MenuLoginController.nom, 195393, 1);
             cola2.agregarProducto(p);
         }
         if(evt.equals(btnD2)){
-            producto p = new producto("Cerradura digital inteligente", "images/image-removebg-preview (5).png", MenuLoginController.nom, 1236000);
+            producto p = new producto("Cerradura digital inteligente", "/cinyumarket/images/image-removebg-preview (5).png", MenuLoginController.nom, 1236000, 1);
             cola2.agregarProducto(p);
         }
         if(evt.equals(btnD3)){
-            producto p = new producto("Corrector de postura digital", "images/image-removebg-preview (7).png", MenuLoginController.nom, 490000);
+            producto p = new producto("Corrector de postura digital", "/cinyumarket/images/image-removebg-preview (7).png", MenuLoginController.nom, 490000, 1);
             cola2.agregarProducto(p);
         }
         if(evt.equals(btnD4)){
-            producto p = new producto("Enchufe Inteligente Smart Plug Wifi Control App Color Blanco", "images/image-removebg-preview (3).png", MenuLoginController.nom, 26990);
+            producto p = new producto("Enchufe Inteligente Smart Plug Wifi Control App Color Blanco", "/cinyumarket/images/image-removebg-preview (3).png", MenuLoginController.nom, 26990, 1);
             cola2.agregarProducto(p);
         }
         if(evt.equals(btnD5)){
-            producto p = new producto("Bascula inteligente Color Blanco", "images/image-removebg-preview (6).png", MenuLoginController.nom, 816000);
+            producto p = new producto("Bascula inteligente Color Blanco", "/cinyumarket/images/image-removebg-preview (6).png", MenuLoginController.nom, 816000, 1);
             cola2.agregarProducto(p);
         }
         if(evt.equals(btnD6)){
-            producto p = new producto("Lampara de mesa inteligente", "images/image-removebg-preview (9).png", MenuLoginController.nom, 127000);
+            producto p = new producto("Lampara de mesa inteligente", "/cinyumarket/images/image-removebg-preview (9).png", MenuLoginController.nom, 127000, 1);
             cola2.agregarProducto(p);
         }
         if(evt.equals(btnCarrito)){

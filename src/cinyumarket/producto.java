@@ -11,15 +11,17 @@ package cinyumarket;
 public class producto {
     String nombre, foto, comprador;
     float precio;
+    int cantidad;
 
     public producto() {
     }
 
-    public producto(String nombre, String foto, String comprador, float precio) {
+    public producto(String nombre, String foto, String comprador, float precio, int cantidad) {
         this.nombre = nombre;
         this.foto = foto;
         this.comprador = comprador;
         this.precio = precio;
+        this.cantidad = cantidad;
     }
 
     public String getNombre() {
@@ -53,4 +55,13 @@ public class producto {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+    
 }

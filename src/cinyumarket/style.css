@@ -1,0 +1,17 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 12/11/2024, 9:55:01 p. m.
+    Author     : Paula
+*/
+.boton-comprar {
+    -fx-background-color: black;  /* Fondo negro */
+    -fx-text-fill: white;  /* Texto blanco */
+    -fx-font-size: 13px;  /* Tamaño de la fuente */
+    -fx-font-weight: bold;
+    -fx-padding: 4px;  /* Espaciado alrededor del texto */
+    -fx-border-radius: 5px;  /* Bordes redondeados */
+    -fx-background-radius: 5px;  /* Bordes redondeados del fondo */
+}
