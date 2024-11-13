@@ -6,7 +6,6 @@ package cinyumarket;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Queue;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -125,6 +124,38 @@ public class CarritoController implements Initializable {
         if(evt.equals(btnBack)){
             loadStage("/cinyumarket/principal.fxml", e);
         }
+    }
+    
+    public void limpiarCarrito() {
+        lbNom1.setText("");
+        lbPre1.setText("");
+        lbCant1.setText("");
+        img1.setImage(null);
+
+        lbNom2.setText("");
+        lbPre2.setText("");
+        lbCant2.setText("");
+        img2.setImage(null);
+
+        lbNom3.setText("");
+        lbPre3.setText("");
+        lbCant3.setText("");
+        img3.setImage(null);
+
+        lbNom4.setText("");
+        lbPre4.setText("");
+        lbCant4.setText("");
+        img4.setImage(null);
+
+        lbNom5.setText("");
+        lbPre5.setText("");
+        lbCant5.setText("");
+        img5.setImage(null);
+
+        lbNom6.setText("");
+        lbPre6.setText("");
+        lbCant6.setText("");
+        img6.setImage(null);
     }
     
     /**

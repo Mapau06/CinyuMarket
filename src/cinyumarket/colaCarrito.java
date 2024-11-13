@@ -31,14 +31,12 @@ public class colaCarrito {
             }
         }
 
-        // Si el producto no existe, agregarlo al carrito
         if (!existe && prod.comprador.equals(MenuLoginController.nom)) {
             cola.add(prod);
             JOptionPane.showMessageDialog(null, "Producto agregado al carrito: " + prod.getNombre());
         }
     }
 
-    // Método para eliminar un producto específico por su nombre
     public void eliminarProductoPorNombre(String nombreProducto) {
         for (producto elim : cola){
             if(elim.nombre.equals(nombreProducto)){
@@ -48,7 +46,6 @@ public class colaCarrito {
         }
     }
 
-    // Método para comprar un producto específico por su nombre
     public void comprarProductoPorNombre(String nombreProducto) {
         producto productoComprado = null;
         for (producto prod : cola) {
@@ -66,7 +63,6 @@ public class colaCarrito {
         }
     }
 
-    // Método para procesar la compra de todos los productos en el carrito
     public void comprarTodosLosProductos() {
         if (cola.isEmpty()) {
             System.out.println("El carrito está vacío, no hay productos para comprar.");
@@ -81,7 +77,7 @@ public class colaCarrito {
             total += prod.getPrecio();
         }
 
-        cola.clear(); // Vacía el carrito después de comprar
+        cola.clear(); 
         System.out.println("Compra realizada. Total: $" + total);
     }
     public producto obtenerProducto(String nombreProducto) {
@@ -90,20 +86,9 @@ public class colaCarrito {
                 return prod;
             }
         }
-        return null;  // En caso de que no se encuentre el producto
+        return null;  
     }
-    public int calcularCantidad(producto producto) {
-        int cantidad = 0;
 
-        // Recorremos la cola y contamos cuántas veces aparece el producto
-        for (producto p : cola) {
-            if (p.getNombre().equals(producto.getNombre())) {
-                cantidad++;
-            }
-        }
-
-        return cantidad;
-    }
     public Queue<producto> getProductos() {
         return cola;
     }
