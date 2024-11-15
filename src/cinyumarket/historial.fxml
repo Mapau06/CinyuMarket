@@ -66,7 +66,7 @@
                   </Button>
                </children>
             </HBox>
-            <Label text="Carrito de Compras" textFill="WHITE">
+            <Label text="Historial de compras" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="20.0" />
                </font>

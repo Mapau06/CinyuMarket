@@ -47,6 +47,8 @@ public class CarritoController implements Initializable {
     @FXML
     private VBox vbox1, vbox2, vbox3, vbox4, vbox5, vbox6;
     
+    public static String nom, pre, img;
+    
     public void actualizarCarrito() {
         int index = 1; 
         for (producto p : PrincipalController.cola.getProductos()) {
@@ -55,55 +57,97 @@ public class CarritoController implements Initializable {
                     lbNom1.setText(p.getNombre());
                     lbPre1.setText("$" + p.getPrecio());
                     lbCant1.setText("Cantidad: " + p.getCantidad());
+                    String ima1 = p.getFoto();
                     Image image1 = new Image(p.getFoto());
                     img1.setImage(image1);
                     Button btnComprar1 = new Button("Comprar");
                     btnComprar1.getStyleClass().add("boton-comprar");
+                    btnComprar1.setOnAction(event -> {
+                        nom = lbNom1.getText();
+                        pre = lbPre1.getText();
+                        img = ima1;
+                        loadStage("/cinyumarket/compraProducto.fxml", event);
+                    });
                     vbox1.getChildren().add(btnComprar1);
                 } else if (index == 2) {
                     lbNom2.setText(p.getNombre());
                     lbPre2.setText("$" + p.getPrecio());
                     lbCant2.setText("Cantidad: " + p.getCantidad());
+                    String ima2 = p.getFoto();
                     Image image2 = new Image(p.getFoto());
                     img2.setImage(image2);
                     Button btnComprar2 = new Button("Comprar");
                     btnComprar2.getStyleClass().add("boton-comprar");
+                    btnComprar2.setOnAction(event -> {
+                        nom = lbNom2.getText();
+                        pre = lbPre2.getText();
+                        img = ima2;
+                        loadStage("/cinyumarket/compraProducto.fxml", event);
+                    });
                     vbox2.getChildren().add(btnComprar2);
                 } else if (index == 3) {
                     lbNom3.setText(p.getNombre());
                     lbPre3.setText("$" + p.getPrecio());
                     lbCant3.setText("Cantidad: " + p.getCantidad());
+                    String ima3 = p.getFoto();
                     Image image3 = new Image(p.getFoto());
                     img3.setImage(image3);
                     Button btnComprar3 = new Button("Comprar");
                     btnComprar3.getStyleClass().add("boton-comprar");
+                    btnComprar3.setOnAction(event -> {
+                        nom = lbNom3.getText();
+                        pre = lbPre3.getText();
+                        img = ima3;
+                        loadStage("/cinyumarket/compraProducto.fxml", event);
+                    });
                     vbox3.getChildren().add(btnComprar3);
                 } else if (index == 4) {
                     lbNom4.setText(p.getNombre());
                     lbPre4.setText("$" + p.getPrecio());
                     lbCant4.setText("Cantidad: " + p.getCantidad());
+                    String ima4 = p.getFoto();
                     Image image4 = new Image(p.getFoto());
                     img4.setImage(image4);
                     Button btnComprar4 = new Button("Comprar");
                     btnComprar4.getStyleClass().add("boton-comprar");
+                    btnComprar4.setOnAction(event -> {
+                        nom = lbNom4.getText();
+                        pre = lbPre4.getText();
+                        img = ima4;
+                        loadStage("/cinyumarket/compraProducto.fxml", event);
+                    });
                     vbox4.getChildren().add(btnComprar4);
                 } else if (index == 5) {
                     lbNom5.setText(p.getNombre());
                     lbPre5.setText("$" + p.getPrecio());
                     lbCant5.setText("Cantidad: " + p.getCantidad());
+                    String ima5 = p.getFoto();
                     Image image5 = new Image(p.getFoto());
                     img5.setImage(image5);
                     Button btnComprar5 = new Button("Comprar");
                     btnComprar5.getStyleClass().add("boton-comprar");
+                    btnComprar5.setOnAction(event -> {
+                        nom = lbNom5.getText();
+                        pre = lbPre5.getText();
+                        img = ima5;
+                        loadStage("/cinyumarket/compraProducto.fxml", event);
+                    });
                     vbox5.getChildren().add(btnComprar5);
                 } else if (index == 6) {
                     lbNom6.setText(p.getNombre());
                     lbPre6.setText("$" + p.getPrecio());
                     lbCant6.setText("Cantidad: " + p.getCantidad());
+                    String ima6 = p.getFoto();
                     Image image6 = new Image(p.getFoto());
                     img6.setImage(image6);
                     Button btnComprar6 = new Button("Comprar");
                     btnComprar6.getStyleClass().add("boton-comprar");
+                    btnComprar6.setOnAction(event -> {
+                        nom = lbNom6.getText();
+                        pre = lbPre6.getText();
+                        img = ima6;
+                        loadStage("/cinyumarket/compraProducto.fxml", event);
+                    });
                     vbox6.getChildren().add(btnComprar6);
                 }
                 index++;
