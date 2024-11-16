@@ -43,6 +43,18 @@
                         <Font name="Tahoma Bold" size="30.0" />
                      </font>
                   </Label>
+                  <Button fx:id="btnHistorial" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: transparent;" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/factura.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="75.0" />
+                     </HBox.margin>
+                  </Button>
                   <Button fx:id="btnCarrito" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: transparent;" text="Button">
                      <graphic>
                         <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
@@ -52,7 +64,7 @@
                         </ImageView>
                      </graphic>
                      <HBox.margin>
-                        <Insets left="100.0" />
+                        <Insets />
                      </HBox.margin>
                   </Button>
                   <Button fx:id="btnDeseos" contentDisplay="GRAPHIC_ONLY" maxHeight="20.0" maxWidth="20.0" mnemonicParsing="false" onAction="#actionEvent" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: transparent;" text="Button">

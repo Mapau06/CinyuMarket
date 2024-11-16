@@ -36,7 +36,7 @@ public class PrincipalController implements Initializable {
     public static pilaHistorial pila = new pilaHistorial();
     
     @FXML
-    private Button btnBack, btnDeseos, btnCarrito, btnC1, btnC2, btnC3, btnC4, btnC5, btnC6,
+    private Button btnBack, btnDeseos, btnCarrito, btnHistorial, btnC1, btnC2, btnC3, btnC4, btnC5, btnC6,
             btnD1, btnD2, btnD3, btnD4, btnD5, btnD6;
     
     public void actionEvent (ActionEvent e){
@@ -97,6 +97,9 @@ public class PrincipalController implements Initializable {
         }
         if(evt.equals(btnBack)){
             loadStage("/cinyumarket/login.fxml", e);
+        }
+        if(evt.equals(btnHistorial)){
+            loadStage("/cinyumarket/historial.fxml", e);
         }
     }
     

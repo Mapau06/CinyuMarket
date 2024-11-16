@@ -49,8 +49,6 @@ public class CarritoController implements Initializable {
     @FXML
     private VBox vbox1, vbox2, vbox3, vbox4, vbox5, vbox6;
     
-    List<VBox> contenedores = Arrays.asList(vbox1, vbox2, vbox3, vbox4, vbox5, vbox6);
-    
     public static String nom, pre, img;
     
     public void actualizarCarrito() {
