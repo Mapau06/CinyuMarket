@@ -21,59 +21,29 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
-import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
  *
  * @author Paula
  */
-public class CompraProductoController implements Initializable {
-    @FXML
-    private Button btnBack, btnCarrito, btnDeseos, btnComprar, btnHistorial;
+public class ConfirmacionController implements Initializable {
     
     @FXML
-    private ImageView img1;
+    private Label mensaje;
     
     @FXML
-    private Label lbNom1, lbPre1;
+    private Button confirmar;
     
-    @FXML
-    private TextField correo, nombre, direccion;
+    public static String texto, url;
     
-    public void actionEvent(ActionEvent e){
+    public void actionEvent (ActionEvent e){
         Object evt = e.getSource();
-        
-        if(evt.equals(btnComprar)){
-            if(!correo.getText().equals("") && !nombre.getText().equals("") && !direccion.getText().equals("")){
-                producto p = new producto(CarritoController.nom, CarritoController.img, MenuLoginController.nom
-                        , Float.parseFloat(CarritoController.pre.replace("$", "")), 1);
-                PrincipalController.cola.eliminarProductoPorNombre(CarritoController.nom);
-                PrincipalController.pila.añadirHistorial(p);
-                ConfirmacionController.texto = "¡Compra exitosa!";
-                ConfirmacionController.url = "/cinyumarket/historial.fxml";
-                loadStage("/cinyumarket/confirmacion.fxml", e);
-            }else{
-                JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
-            }
-        }
-        if(evt.equals(btnCarrito)){
-            loadStage("/cinyumarket/carrito.fxml", e);
-        }
-        if(evt.equals(btnDeseos)){
-            loadStage("/cinyumarket/deseos.fxml", e);
-        }
-        if(evt.equals(btnBack)){
-            loadStage("/cinyumarket/principal.fxml", e);
-        }
-        if(evt.equals(btnHistorial)){
-            loadStage("/cinyumarket/historial.fxml", e);
+        if(evt.equals(confirmar)){
+            loadStage(url, e);
         }
     }
     /**
@@ -81,13 +51,9 @@ public class CompraProductoController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Image image = new Image(CarritoController.img);
-        img1.setImage(image);
-        lbNom1.setText(CarritoController.nom);
-        lbPre1.setText(CarritoController.pre);
+        mensaje.setText(texto);
         // TODO
     }    
-    
     private void loadStage(String url, Event event){
         
         try {
@@ -111,8 +77,7 @@ public class CompraProductoController implements Initializable {
                 }
             });
         }catch ( IOException ex){
-            Logger.getLogger(CarritoController.class.getName()).log(Level.SEVERE,null, ex);
+            Logger.getLogger(PrincipalController.class.getName()).log(Level.SEVERE,null, ex);
         }     
     }
-    
 }

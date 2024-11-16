@@ -44,7 +44,7 @@ public class CarritoController implements Initializable {
     private ImageView img1, img2, img3, img4, img5, img6;
     
     @FXML
-    private Button btnBack, btnCarrito, btnDeseos;
+    private Button btnBack, btnCarrito, btnDeseos, btnHistorial;
     
     @FXML
     private VBox vbox1, vbox2, vbox3, vbox4, vbox5, vbox6;
@@ -75,7 +75,10 @@ public class CarritoController implements Initializable {
                     btnEliminar1.getStyleClass().add("boton-comprar");
                     btnEliminar1.setOnAction(event -> {
                         PrincipalController.cola.eliminarProductoPorNombre(lbNom1.getText());
-                        actualizarCarrito();
+                        ConfirmacionController.texto = "¡Producto eliminado!";
+                        ConfirmacionController.url = "/cinyumarket/carrito.fxml";
+                        loadStage("/cinyumarket/confirmacion.fxml", event);
+                                
                     });
                     vbox1.getChildren().addAll(btnComprar1, btnEliminar1);
                 } else if (index == 2) {
@@ -93,7 +96,16 @@ public class CarritoController implements Initializable {
                         img = ima2;
                         loadStage("/cinyumarket/compraProducto.fxml", event);
                     });
-                    vbox2.getChildren().add(btnComprar2);
+                    Button btnEliminar2 = new Button("Eliminar");
+                    btnEliminar2.getStyleClass().add("boton-comprar");
+                    btnEliminar2.setOnAction(event -> {
+                        PrincipalController.cola.eliminarProductoPorNombre(lbNom2.getText());
+                        ConfirmacionController.texto = "¡Producto eliminado!";
+                        ConfirmacionController.url = "/cinyumarket/carrito.fxml";
+                        loadStage("/cinyumarket/confirmacion.fxml", event);
+                                
+                    });
+                    vbox2.getChildren().addAll(btnComprar2,btnEliminar2);
                 } else if (index == 3) {
                     lbNom3.setText(p.getNombre());
                     lbPre3.setText("$" + p.getPrecio());
@@ -109,7 +121,16 @@ public class CarritoController implements Initializable {
                         img = ima3;
                         loadStage("/cinyumarket/compraProducto.fxml", event);
                     });
-                    vbox3.getChildren().add(btnComprar3);
+                    Button btnEliminar3 = new Button("Eliminar");
+                    btnEliminar3.getStyleClass().add("boton-comprar");
+                    btnEliminar3.setOnAction(event -> {
+                        PrincipalController.cola.eliminarProductoPorNombre(lbNom3.getText());
+                        ConfirmacionController.texto = "¡Producto eliminado!";
+                        ConfirmacionController.url = "/cinyumarket/carrito.fxml";
+                        loadStage("/cinyumarket/confirmacion.fxml", event);
+                                
+                    });
+                    vbox3.getChildren().addAll(btnComprar3,btnEliminar3);
                 } else if (index == 4) {
                     lbNom4.setText(p.getNombre());
                     lbPre4.setText("$" + p.getPrecio());
@@ -125,7 +146,16 @@ public class CarritoController implements Initializable {
                         img = ima4;
                         loadStage("/cinyumarket/compraProducto.fxml", event);
                     });
-                    vbox4.getChildren().add(btnComprar4);
+                    Button btnEliminar4 = new Button("Eliminar");
+                    btnEliminar4.getStyleClass().add("boton-comprar");
+                    btnEliminar4.setOnAction(event -> {
+                        PrincipalController.cola.eliminarProductoPorNombre(lbNom4.getText());
+                        ConfirmacionController.texto = "¡Producto eliminado!";
+                        ConfirmacionController.url = "/cinyumarket/carrito.fxml";
+                        loadStage("/cinyumarket/confirmacion.fxml", event);
+                                
+                    });
+                    vbox4.getChildren().addAll(btnComprar4,btnEliminar4);
                 } else if (index == 5) {
                     lbNom5.setText(p.getNombre());
                     lbPre5.setText("$" + p.getPrecio());
@@ -141,7 +171,16 @@ public class CarritoController implements Initializable {
                         img = ima5;
                         loadStage("/cinyumarket/compraProducto.fxml", event);
                     });
-                    vbox5.getChildren().add(btnComprar5);
+                    Button btnEliminar5 = new Button("Eliminar");
+                    btnEliminar5.getStyleClass().add("boton-comprar");
+                    btnEliminar5.setOnAction(event -> {
+                        PrincipalController.cola.eliminarProductoPorNombre(lbNom5.getText());
+                        ConfirmacionController.texto = "¡Producto eliminado!";
+                        ConfirmacionController.url = "/cinyumarket/carrito.fxml";
+                        loadStage("/cinyumarket/confirmacion.fxml", event);
+                                
+                    });
+                    vbox5.getChildren().addAll(btnComprar5,btnEliminar5);
                 } else if (index == 6) {
                     lbNom6.setText(p.getNombre());
                     lbPre6.setText("$" + p.getPrecio());
@@ -157,7 +196,16 @@ public class CarritoController implements Initializable {
                         img = ima6;
                         loadStage("/cinyumarket/compraProducto.fxml", event);
                     });
-                    vbox6.getChildren().add(btnComprar6);
+                    Button btnEliminar6 = new Button("Eliminar");
+                    btnEliminar6.getStyleClass().add("boton-comprar");
+                    btnEliminar6.setOnAction(event -> {
+                        PrincipalController.cola.eliminarProductoPorNombre(lbNom6.getText());
+                        ConfirmacionController.texto = "¡Producto eliminado!";
+                        ConfirmacionController.url = "/cinyumarket/carrito.fxml";
+                        loadStage("/cinyumarket/confirmacion.fxml", event);
+                                
+                    });
+                    vbox6.getChildren().addAll(btnComprar6,btnEliminar6);
                 }
                 index++;
                 if (index > 6) break; 
@@ -176,6 +224,9 @@ public class CarritoController implements Initializable {
         }
         if(evt.equals(btnBack)){
             loadStage("/cinyumarket/principal.fxml", e);
+        }
+        if(evt.equals(btnHistorial)){
+            loadStage("/cinyumarket/historial.fxml", e);
         }
     }
     

@@ -44,7 +44,7 @@ public class DeseosController implements Initializable {
             btnimg1, btnimg2, btnimg3, btnimg4, btnimg5, btnimg6;
     
     @FXML
-    private Button btnBack, btnCarrito, btnDeseos,
+    private Button btnBack, btnCarrito, btnDeseos, btnHistorial,
             btn1, btn2, btn3, btn4, btn5, btn6;
     
     
@@ -113,6 +113,9 @@ public class DeseosController implements Initializable {
         }
         if(evt.equals(btnBack)){
             loadStage("/cinyumarket/principal.fxml", e);
+        }
+        if(evt.equals(btnHistorial)){
+            loadStage("/cinyumarket/historial.fxml", e);
         }
         if(evt.equals(btn1)){
             String elim = lbNom1.getText();
