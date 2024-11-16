@@ -40,45 +40,14 @@ public class colaCarrito {
     public void eliminarProductoPorNombre(String nombreProducto) {
         for (producto elim : cola){
             if(elim.nombre.equals(nombreProducto)){
-                cola.remove(elim);
-                break;
+                if(elim.cantidad == 1){
+                    cola.remove(elim);
+                    break;
+                }else{
+                    elim.cantidad -= 1;
+                }
             }
         }
-    }
-
-    public void comprarProductoPorNombre(String nombreProducto) {
-        producto productoComprado = null;
-        for (producto prod : cola) {
-            if (prod.getNombre().equalsIgnoreCase(nombreProducto)) {
-                productoComprado = prod;
-                break;
-            }
-        }
-
-        if (productoComprado != null) {
-            System.out.println("Comprando producto: " + productoComprado.getNombre() + " - Precio: $" + productoComprado.getPrecio());
-            cola.remove(productoComprado);
-        } else {
-            System.out.println("El producto con el nombre '" + nombreProducto + "' no está en el carrito.");
-        }
-    }
-
-    public void comprarTodosLosProductos() {
-        if (cola.isEmpty()) {
-            System.out.println("El carrito está vacío, no hay productos para comprar.");
-            return;
-        }
-
-        float total = 0;
-        System.out.println("Procesando compra de todos los productos:");
-
-        for (producto prod : cola) {
-            System.out.println("Comprando producto: " + prod.getNombre() + " - Precio: $" + prod.getPrecio());
-            total += prod.getPrecio();
-        }
-
-        cola.clear(); 
-        System.out.println("Compra realizada. Total: $" + total);
     }
     public producto obtenerProducto(String nombreProducto) {
         for (producto prod : cola) {

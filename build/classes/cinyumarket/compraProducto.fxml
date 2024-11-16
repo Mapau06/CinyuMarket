@@ -136,7 +136,7 @@
                         <Insets left="5.0" right="5.0" />
                      </padding>
                   </VBox>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #74581F;" text="Comprar" textFill="WHITE">
+                  <Button fx:id="btnComprar" mnemonicParsing="false" onAction="#actionEvent" style="-fx-background-color: #74581F;" text="Comprar" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>

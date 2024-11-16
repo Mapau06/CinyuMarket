@@ -14,4 +14,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-padding: 4px;  /* Espaciado alrededor del texto */
     -fx-border-radius: 5px;  /* Bordes redondeados */
     -fx-background-radius: 5px;  /* Bordes redondeados del fondo */
+    -fx-border-color: #ffffff
 }

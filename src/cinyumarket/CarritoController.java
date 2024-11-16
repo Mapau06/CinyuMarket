@@ -6,6 +6,8 @@ package cinyumarket;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -47,9 +49,12 @@ public class CarritoController implements Initializable {
     @FXML
     private VBox vbox1, vbox2, vbox3, vbox4, vbox5, vbox6;
     
+    List<VBox> contenedores = Arrays.asList(vbox1, vbox2, vbox3, vbox4, vbox5, vbox6);
+    
     public static String nom, pre, img;
     
     public void actualizarCarrito() {
+        limpiarCarrito();
         int index = 1; 
         for (producto p : PrincipalController.cola.getProductos()) {
             if (p.comprador.equals(MenuLoginController.nom)){
@@ -68,7 +73,13 @@ public class CarritoController implements Initializable {
                         img = ima1;
                         loadStage("/cinyumarket/compraProducto.fxml", event);
                     });
-                    vbox1.getChildren().add(btnComprar1);
+                    Button btnEliminar1 = new Button("Eliminar");
+                    btnEliminar1.getStyleClass().add("boton-comprar");
+                    btnEliminar1.setOnAction(event -> {
+                        PrincipalController.cola.eliminarProductoPorNombre(lbNom1.getText());
+                        actualizarCarrito();
+                    });
+                    vbox1.getChildren().addAll(btnComprar1, btnEliminar1);
                 } else if (index == 2) {
                     lbNom2.setText(p.getNombre());
                     lbPre2.setText("$" + p.getPrecio());

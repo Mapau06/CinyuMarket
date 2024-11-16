@@ -21,11 +21,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import javafx.stage.WindowEvent;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -34,7 +36,7 @@ import javafx.stage.WindowEvent;
  */
 public class CompraProductoController implements Initializable {
     @FXML
-    private Button btnBack, btnCarrito, btnDeseos;
+    private Button btnBack, btnCarrito, btnDeseos, btnComprar;
     
     @FXML
     private ImageView img1;
@@ -42,9 +44,22 @@ public class CompraProductoController implements Initializable {
     @FXML
     private Label lbNom1, lbPre1;
     
-        public void actionEvent(ActionEvent e){
+    @FXML
+    private TextField correo, nombre, direccion;
+    
+    public void actionEvent(ActionEvent e){
         Object evt = e.getSource();
         
+        if(evt.equals(btnComprar)){
+            if(!correo.getText().equals("") && !nombre.getText().equals("") && !direccion.getText().equals("")){
+                producto p = new producto(CarritoController.nom, CarritoController.img, MenuLoginController.nom
+                        , Float.parseFloat(CarritoController.pre.replace("$", "")), 1);
+                PrincipalController.cola.eliminarProductoPorNombre(CarritoController.nom);
+                PrincipalController.pila.añadirHistorial(p);
+            }else{
+                JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios");
+            }
+        }
         if(evt.equals(btnCarrito)){
             loadStage("/cinyumarket/carrito.fxml", e);
         }

@@ -80,10 +80,10 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #F3E3C2;">
                <children>
-                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <ImageView fx:id="img1" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                        <VBox fx:id="vbox1" alignment="CENTER_LEFT" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox1" alignment="CENTER_LEFT" layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                            <children>
                               <Label fx:id="lbNom1" prefHeight="74.0" prefWidth="80.0" wrapText="true">
                                  <font>
@@ -105,10 +105,10 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="100.0" style="-fx-background-color: black;" />
-                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <ImageView fx:id="img4" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                        <VBox fx:id="vbox4" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox4" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                            <children>
                               <Label fx:id="lbNom4" prefHeight="97.0" prefWidth="80.0" wrapText="true">
                                  <font>
@@ -133,10 +133,10 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #F3E3C2;">
                <children>
-                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <ImageView fx:id="img2" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                        <VBox fx:id="vbox2" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox2" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                            <children>
                               <Label fx:id="lbNom2" prefHeight="74.0" prefWidth="80.0" wrapText="true">
                                  <font>
@@ -158,10 +158,10 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" style="-fx-background-color: black;" />
-                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <ImageView fx:id="img5" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                        <VBox fx:id="vbox5" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox5" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                            <children>
                               <Label fx:id="lbNom5" prefHeight="74.0" prefWidth="80.0" wrapText="true">
                                  <font>
@@ -186,10 +186,10 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="180.0" style="-fx-background-color: #F3E3C2;">
                <children>
-                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <ImageView fx:id="img3" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                        <VBox fx:id="vbox3" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox3" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                            <children>
                               <Label fx:id="lbNom3" prefHeight="74.0" prefWidth="80.0" wrapText="true">
                                  <font>
@@ -211,10 +211,10 @@
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" style="-fx-background-color: black;" />
-                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="166.0" prefWidth="200.0" spacing="5.0">
                      <children>
                         <ImageView fx:id="img6" fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                        <VBox fx:id="vbox6" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="vbox6" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                            <children>
                               <Label fx:id="lbNom6" prefHeight="74.0" prefWidth="80.0" wrapText="true">
                                  <font>

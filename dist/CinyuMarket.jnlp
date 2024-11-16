@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="CinyuMarket.jar" size="1743560" download="eager" />
+    <jar href="CinyuMarket.jar" size="1744283" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="cinyumarket.CinyuMarket"  name="CinyuMarket" />
   <update check="always"/>

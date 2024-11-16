@@ -33,6 +33,7 @@ public class PrincipalController implements Initializable {
     
     public static colaCarrito cola = new colaCarrito();
     public static colaDeseos cola2 = new colaDeseos();
+    public static pilaHistorial pila = new pilaHistorial();
     
     @FXML
     private Button btnBack, btnDeseos, btnCarrito, btnC1, btnC2, btnC3, btnC4, btnC5, btnC6,
